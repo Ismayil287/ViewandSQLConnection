@@ -46,6 +46,7 @@ namespace ViewSQLConnection
             {
                 lblCheck.Visible = true;
                 lblCheck.Text = "THERE IS NO DATA SUCH AS !!!";
+                this.grdView.Visible = false;
             }
             
             conn.Close();
