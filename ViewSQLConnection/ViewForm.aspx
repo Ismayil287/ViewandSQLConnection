@@ -11,11 +11,11 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="lblCategoryName" runat="server" Text="Category Name" CssClass ="label"></asp:Label>
-            <asp:TextBox ID="txtCategoryName" runat="server" CssClass="txtBox"></asp:TextBox>
+            <asp:TextBox ID="txtCategoryName" runat="server" CssClass="txtBox" OnTextChanged="txtCategoryName_TextChanged"></asp:TextBox>
         </div>
         <asp:Label ID="lblCheck" runat="server" Text="" CssClass ="lblCheck"></asp:Label>
         <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" CssClass="button" />
-        <asp:GridView ID="grdView" runat="server" CssClass ="grdView">
+        <asp:GridView PageSize="5" AllowPaging="true" OnPageIndexChanging="grdView_PageIndexChanging" ID="grdView" runat="server" CssClass ="grdView">
         </asp:GridView>
     </form>
 </body>
